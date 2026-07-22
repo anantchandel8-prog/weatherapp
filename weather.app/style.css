@@ -1,0 +1,1125 @@
+/* ==========================================
+            GOOGLE FONT & RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+    background:linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe,
+        #43e97b,
+        #38f9d7
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientAnimation 12s ease infinite;
+
+}
+
+/* ==========================================
+          Animated Background
+========================================== */
+
+@keyframes gradientAnimation{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* ==========================================
+            MAIN CONTAINER
+========================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:900px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    color:white;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+.logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.logo-icon{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:48px;
+
+    background:rgba(255,255,255,.25);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    animation:sunRotate 12s linear infinite;
+
+}
+
+/* Sun Rotation */
+
+@keyframes sunRotate{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+.logo-text h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.logo-text p{
+
+    font-size:16px;
+
+    opacity:.9;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+            SEARCH BOX
+========================================== */
+
+.search-box{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    height:58px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    padding:0 20px;
+
+    font-size:17px;
+
+    background:white;
+
+    color:#333;
+
+    transition:.3s;
+
+}
+
+.search-box input:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 15px rgba(255,255,255,.5);
+
+}
+
+/* Buttons */
+
+.search-box button{
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#2193b0;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+/* Hover Effect */
+
+.search-box button:hover{
+
+    background:#2193b0;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* Click Effect */
+
+.search-box button:active{
+
+    transform:scale(.95);
+
+}
+
+/* Disabled Button */
+
+.search-box button:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.6;
+
+}
+
+/* ==========================================
+          Section Title
+========================================== */
+
+h2{
+
+    font-weight:600;
+
+}
+/* ==========================================
+            WEATHER CARD
+========================================== */
+
+.weather-card{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.weather-card:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.weather-card img{
+
+    width:130px;
+
+    height:130px;
+
+    margin:15px auto;
+
+    display:block;
+
+}
+
+#cityName{
+
+    font-size:32px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+#temperature{
+
+    font-size:72px;
+
+    font-weight:700;
+
+    margin:10px 0;
+
+}
+
+#condition{
+
+    font-size:24px;
+
+    font-weight:500;
+
+    margin-bottom:10px;
+
+}
+
+#dateTime{
+
+    font-size:15px;
+
+    opacity:.85;
+
+}
+
+/* ==========================================
+            DETAILS SECTION
+========================================== */
+
+.details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.card i{
+
+    font-size:32px;
+
+    margin-bottom:12px;
+
+    color:#ffffff;
+
+}
+
+.card h3{
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+.card p{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+          EXTRA DETAILS SECTION
+========================================== */
+
+.extra-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.extra-card{
+
+    background:rgba(255,255,255,.10);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.extra-card:hover{
+
+    transform:scale(1.03);
+
+    background:rgba(255,255,255,.20);
+
+}
+
+.extra-card i{
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+.extra-card h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+.extra-card p{
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+            SMALL ANIMATION
+========================================== */
+
+.card,
+.extra-card,
+.weather-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}/* ==========================================
+            AIR QUALITY SECTION
+========================================== */
+
+.air-quality{
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+
+}
+
+.air-quality h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+    font-weight:600;
+
+}
+
+.aqi-card{
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.aqi-card:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.22);
+
+}
+
+.aqi-card p{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+.aqi-card h2{
+
+    font-size:55px;
+
+    color:#00ff99;
+
+}
+
+/* ==========================================
+            FORECAST
+========================================== */
+
+.forecast-section{
+
+    margin-top:35px;
+
+}
+
+.forecast-section h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+#forecast{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+/* Forecast Card */
+
+.forecast-card{
+
+    width:140px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.forecast-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.forecast-card h3{
+
+    margin-bottom:12px;
+
+    font-size:18px;
+
+}
+
+.forecast-card img{
+
+    width:70px;
+
+    height:70px;
+
+    margin:10px auto;
+
+}
+
+.forecast-card p{
+
+    margin-top:8px;
+
+    font-size:16px;
+
+}
+
+/* ==========================================
+            LOADING
+========================================== */
+
+.loading{
+
+    display:none;
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+.loading i{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+.loading p{
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+            ERROR MESSAGE
+========================================== */
+
+.error-message{
+
+    display:none;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    background:#ff4d4d;
+
+    color:white;
+
+    text-align:center;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+            FOOTER
+========================================== */
+
+footer{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    opacity:.85;
+
+}
+
+footer p{
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+        SMOOTH TRANSITION
+========================================== */
+
+.container,
+.card,
+.extra-card,
+.forecast-card,
+.aqi-card,
+.weather-card{
+
+    transition:.3s ease;
+
+}/* ==========================================
+            RESPONSIVE DESIGN
+========================================== */
+
+@media screen and (max-width:992px){
+
+.container{
+
+    max-width:700px;
+
+}
+
+.weather-card h1{
+
+    font-size:60px;
+
+}
+
+.details{
+
+    gap:15px;
+
+}
+
+.extra-details{
+
+    gap:15px;
+
+}
+
+.forecast-card{
+
+    width:130px;
+
+}
+
+}
+
+/* =============================== */
+
+@media screen and (max-width:768px){
+
+.container{
+
+    padding:25px;
+
+}
+
+.logo{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.logo-text{
+
+    text-align:center;
+
+}
+
+.logo-text h1{
+
+    font-size:34px;
+
+}
+
+.logo-text p{
+
+    font-size:14px;
+
+}
+
+.search-box{
+
+    flex-direction:column;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+}
+
+.search-box button{
+
+    width:100%;
+
+}
+
+.weather-card img{
+
+    width:100px;
+
+}
+
+#cityName{
+
+    font-size:28px;
+
+}
+
+#temperature{
+
+    font-size:50px;
+
+}
+
+#condition{
+
+    font-size:20px;
+
+}
+
+.details{
+
+    grid-template-columns:1fr;
+
+}
+
+.extra-details{
+
+    grid-template-columns:1fr;
+
+}
+
+.forecast-card{
+
+    width:150px;
+
+}
+
+}
+
+/* =============================== */
+
+@media screen and (max-width:480px){
+
+body{
+
+    padding:15px;
+
+}
+
+.container{
+
+    padding:18px;
+
+}
+
+.logo-icon{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:38px;
+
+}
+
+.logo-text h1{
+
+    font-size:28px;
+
+}
+
+.weather-card{
+
+    padding:20px;
+
+}
+
+.weather-card img{
+
+    width:90px;
+
+}
+
+#temperature{
+
+    font-size:42px;
+
+}
+
+.card{
+
+    padding:18px;
+
+}
+
+.extra-card{
+
+    padding:18px;
+
+}
+
+.forecast-card{
+
+    width:100%;
+
+}
+
+.aqi-card h2{
+
+    font-size:40px;
+
+}
+
+}
+
+/* ==========================================
+        CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#dbeafe;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2193b0;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#17667d;
+
+}
+
+/* ==========================================
+            SELECTION COLOR
+========================================== */
+
+::selection{
+
+    background:#2193b0;
+
+    color:white;
+
+}
+
+/* ==========================================
+            IMAGE ANIMATION
+========================================== */
+
+#weatherIcon{
+
+    animation:floatIcon 3s ease-in-out infinite;
+
+}
+
+@keyframes floatIcon{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ==========================================
+        BUTTON RIPPLE EFFECT
+========================================== */
+
+.search-box button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.search-box button::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.4);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.5s;
+
+}
+
+.search-box button:active::after{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+/* ==========================================
+        CARD SHADOW ANIMATION
+========================================== */
+
+.card:hover,
+.extra-card:hover,
+.forecast-card:hover,
+.aqi-card:hover{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/* ==========================================
+            FOOTER
+========================================== */
+
+footer{
+
+    border-top:1px solid rgba(255,255,255,.25);
+
+    padding-top:20px;
+
+}
+
+footer p{
+
+    color:#ffffff;
+
+    opacity:.8;
+
+}
+
+/* ==========================================
+            END OF CSS
+========================================== */

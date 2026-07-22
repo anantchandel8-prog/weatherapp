@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Live Weather Forecast</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= LOGO ================= -->
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ☀️
+            </div>
+
+            <div class="logo-text">
+                <h1>SkyCast</h1>
+                <p>Live Weather Forecast</p>
+            </div>
+
+        </div>
+
+        <!-- ================= SEARCH ================= -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name...">
+
+            <button
+                id="searchBtn"
+                title="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+            <button
+                id="locationBtn"
+                title="Current Location">
+
+                <i class="fa-solid fa-location-crosshairs"></i>
+
+            </button>
+
+        </div>
+
+        <!-- ================= WEATHER CARD ================= -->
+
+        <div class="weather-card">
+
+            <img
+                id="weatherIcon"
+                src=""
+                alt="Weather Icon">
+
+            <h2 id="cityName">
+                City Name
+            </h2>
+
+            <h1 id="temperature">
+                --°C
+            </h1>
+
+            <h3 id="condition">
+                Weather Condition
+            </h3>
+
+            <p id="dateTime">
+                Date & Time
+            </p>
+
+        </div>
+
+        <!-- ================= WEATHER DETAILS ================= -->
+
+        <div class="details">
+
+            <div class="card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <h3>Humidity</h3>
+
+                <p id="humidity">
+                    --
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-wind"></i>
+
+                <h3>Wind Speed</h3>
+
+                <p id="wind">
+                    --
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <h3>Pressure</h3>
+
+                <p id="pressure">
+                    --
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <h3>Feels Like</h3>
+
+                <p id="feels">
+                    --
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================= EXTRA DETAILS ================= -->
+
+        <div class="extra-details">
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-eye"></i>
+
+                <h3>Visibility</h3>
+
+                <p id="visibility">
+                    --
+                </p>
+
+            </div>
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-sun"></i>
+
+                <h3>UV Index</h3>
+
+                <p id="uv">
+                    --
+                </p>
+
+            </div>
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <h3>Cloud</h3>
+
+                <p id="cloud">
+                    --
+                </p>
+
+            </div>
+
+            <div class="extra-card">
+
+                <i class="fa-solid fa-earth-asia"></i>
+
+                <h3>Country</h3>
+
+                <p id="country">
+                    --
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================= AIR QUALITY ================= -->
+
+        <div class="air-quality">
+
+            <h2>
+
+                <i class="fa-solid fa-leaf"></i>
+
+                Air Quality
+
+            </h2>
+
+            <div class="aqi-card">
+
+                <p>Air Quality Index</p>
+
+                <h2 id="aqi">
+                    --
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- ================= FORECAST ================= -->
+
+        <div class="forecast-section">
+
+            <h2>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                5-Day Forecast
+
+            </h2>
+
+            <div id="forecast">
+
+                <!-- Forecast cards generated by JavaScript -->
+
+            </div>
+
+        </div>
+
+        <!-- ================= LOADING ================= -->
+
+        <div id="loading" class="loading">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            <p>Loading Weather...</p>
+
+        </div>
+
+        <!-- ================= ERROR ================= -->
+
+        <div id="error" class="error-message">
+
+        </div>
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+
+                © 2026 SkyCast | Built using HTML, CSS & JavaScript
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
